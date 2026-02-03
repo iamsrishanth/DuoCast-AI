@@ -6,6 +6,8 @@
  * and Veo 3.1 for video generation with native audio synthesis.
  */
 
+import { DuoCastPipeline as DuoCastPipelineClass } from './pipeline/duocast.js';
+
 export { DuoCastPipeline, type PipelineInput, type PipelineOptions, type PipelineResult, type ProgressCallback } from './pipeline/duocast.js';
 export { NanoBananaService, type CompositeSceneResult, type NanoBananaOptions } from './services/nanobanana.js';
 export { Veo3Service, type VideoGenerationResult, type Veo3Options } from './services/veo3.js';
@@ -34,7 +36,7 @@ export async function createConversationVideo(
     scenario: string,
     outputPath: string
 ): Promise<{ success: boolean; videoPath?: string; error?: string }> {
-    const pipeline = new DuoCastPipeline();
+    const pipeline = new DuoCastPipelineClass();
     const result = await pipeline.processConversation({
         portraitA,
         portraitB,
