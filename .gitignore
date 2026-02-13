@@ -1,31 +1,19 @@
 # Dependencies
-node_modules/
+server/node_modules
+client/node_modules
+node_modules
+
+# Environment
+
+# Credits state
 
 # Build output
-dist/
+client/dist
 
-# Environment files
-.env
-.env.local
-
-# Output files
-output/
-*.mp4
-*.mp3
-*.wav
-
-# Generated images
-generated_*.png
-scene_*.png
-
-# OS files
+# OS / Editor
 .DS_Store
 Thumbs.db
-
-# IDE
+*.swp
+*.swo
 .vscode/
 .idea/
-
-# Logs
-*.log
-npm-debug.log*
